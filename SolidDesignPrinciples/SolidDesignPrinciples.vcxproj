@@ -131,6 +131,7 @@
     <ClCompile Include="SolidDesignPrinciples.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="OpenClosedPrinciple.h" />
     <ClInclude Include="SingleResponsiblityPrinciple.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

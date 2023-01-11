@@ -23,5 +23,8 @@
     <ClInclude Include="SingleResponsiblityPrinciple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OpenClosedPrinciple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
