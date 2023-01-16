@@ -26,5 +26,14 @@
     <ClInclude Include="OpenClosedPrinciple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LiskovSubstitutionPrinciple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceSegregationPrinciple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DependencyInversionPrinciple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

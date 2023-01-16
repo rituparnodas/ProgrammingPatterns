@@ -63,7 +63,7 @@ template <typename T> struct Specification
 // new: 
 template <typename T> AndSpecification<T> operator&&(const Specification<T>& first, const Specification<T>& second)
 {
-    return { first, second };
+    return { first, second};
 }
 
 template <typename T> struct Filter
@@ -89,7 +89,8 @@ struct ColorSpecification : Specification<Product>
 
     ColorSpecification(Color color) : color(color) {}
 
-    bool is_satisfied(Product* item) const override {
+    bool is_satisfied(Product* item) const override 
+    {
         return item->color == color;
     }
 };
@@ -103,7 +104,8 @@ struct SizeSpecification : Specification<Product>
     {
     }
 
-    bool is_satisfied(Product* item) const override {
+    bool is_satisfied(Product* item) const override 
+    {
         return item->size == size;
     }
 };
@@ -114,9 +116,12 @@ template <typename T> struct AndSpecification : Specification<T>
     const Specification<T>& second;
 
     AndSpecification(const Specification<T>& first, const Specification<T>& second)
-        : first(first), second(second) {}
+        : first(first), second(second) 
+    {
+    }
 
-    bool is_satisfied(T* item) const override {
+    bool is_satisfied(T* item) const override 
+    {
         return first.is_satisfied(item) && second.is_satisfied(item);
     }
 };
@@ -155,3 +160,31 @@ template <typename T> struct AndSpecification : Specification<T>
 //    //getchar();
 //    return 0;
 //}
+
+struct RRR
+{
+    int i;
+
+    RRR(int r) :i(r) {}
+};
+
+struct RD {
+
+    RRR i;
+    RRR j;
+
+    RD(RRR a, RRR b) : i(a), j(b)
+    {
+
+    }
+
+    int Result()
+    {
+        return i.i + j.i;
+    }
+};
+
+RD operator&&(const RRR& first, const RRR& second)
+{
+    return { first , second };
+}
